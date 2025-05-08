@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Crosshair
   - Background
+  - North
+  - South
+  - East
+  - West
+  - NorthEast
+  - NorthWest
+  - SouthEast
+  - SouthWest
+  - Center
   layers:
   - Default
   - TransparentFX
@@ -42,4 +51,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: top
+    uniqueID: 323805911
     locked: 0
