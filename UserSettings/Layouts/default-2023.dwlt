@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 43
+  controlID: 91
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -525,7 +525,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fefaffffe8660000f066000034670000
+      m_ExpandedIDs: fefaffffec66000044670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1012,9 +1012,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 16.197643, y: -4.818241, z: 0.30323172}
+    m_Target: {x: -28.5084, y: -4.541916, z: 1.3632367}
     speed: 2
-    m_Value: {x: 16.197643, y: -4.818241, z: 0.30323172}
+    m_Value: {x: -27.298065, y: -3.9253306, z: 1.3780347}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1064,9 +1064,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.8338785
+    m_Target: 34.364334
     speed: 2
-    m_Value: 10.8338785
+    m_Value: 32.88453
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1212,10 +1212,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Animator\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 232
+    x: 237
     y: 73
-    width: 1243
-    height: 624
+    width: 1300
+    height: 674
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1310,7 +1310,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/New Folder
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1320,16 +1320,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 75
   m_LastFolders:
-  - Assets/New Folder
+  - Assets
   m_LastFoldersGridSize: 75
   m_LastProjectPath: C:\Users\zadr09b\Documents\GitHub\VampireSurvivorLike
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 08680000
-    m_LastClickedID: 26632
-    m_ExpandedIDs: 000000009867000000ca9a3bffffff7f
+    m_SelectedIDs: a8670000
+    m_LastClickedID: 26536
+    m_ExpandedIDs: 00000000a86700009669000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1357,7 +1357,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098670000
+    m_ExpandedIDs: 00000000a8670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1382,8 +1382,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 20670000
-    m_LastClickedInstanceID: 26400
+    m_SelectedInstanceIDs: ec660000
+    m_LastClickedInstanceID: 26348
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 22f0000058f900009c640000789f000000000000
     m_RenameOverlay:
@@ -1451,7 +1451,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 26400
+  m_LastSelectedObjectID: 26408
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
