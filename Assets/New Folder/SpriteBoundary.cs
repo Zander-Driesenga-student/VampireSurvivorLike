@@ -7,37 +7,44 @@ using UnityEngine.UIElements;
 public class SpriteBoundary : MonoBehaviour
 {
     [SerializeField] private GameObject centerTile;
-    private Vector3 north = new Vector2(0f, 10f/9f);
-    private Vector3 south = new Vector2(0f, -10f/9f);
-    private Vector3 east = new Vector2(21f/9f, 0f);
-    private Vector3 west = new Vector2(-21f / 9f, 0f);
-    
-    
+    private Vector3 north = new Vector2(0f, 10f /*/ 9f*/);
+    private Vector3 south = new Vector2(0f, -10f /*/ 9f*/);
+    private Vector3 east = new Vector2(21f /*/ 9f*/, 0f);
+    private Vector3 west = new Vector2(-21f /*/ 9f*/, 0f);
+
+
 
     void Update()
     {
-        
+
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
-        if (gameObject.tag == "North")
+        print("working");
+        if (gameObject.CompareTag("North"))
         {
             MoveTilesNorth();
+            print("working");
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (gameObject.CompareTag("South"))
         {
             MoveTilesSouth();
+            print("working");
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (gameObject.CompareTag("East"))
         {
             MoveTilesEast();
+            print("working");
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (gameObject.CompareTag("West"))
         {
             MoveTilesWest();
+            print("working");
         }
+        else return;
+
     }
 
     public void MoveTilesNorth()
