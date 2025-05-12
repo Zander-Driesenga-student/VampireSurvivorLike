@@ -22,29 +22,32 @@ public class SpriteBoundary : MonoBehaviour
 
     void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
-        print("working");
-        if (gameObject.CompareTag("North"))
+        if (collision.CompareTag("Player"))
         {
-            MoveTilesNorth();
             print("working");
-        }
-        if (gameObject.CompareTag("South"))
-        {
-            MoveTilesSouth();
-            print("working");
-        }
-        if (gameObject.CompareTag("East"))
-        {
-            MoveTilesEast();
-            print("working");
-        }
-        if (gameObject.CompareTag("West"))
-        {
-            MoveTilesWest();
-            print("working");
+            if (gameObject.CompareTag("North"))
+            {
+                MoveTilesNorth();
+                print("working");
+            }
+            if (gameObject.CompareTag("South"))
+            {
+                MoveTilesSouth();
+                print("working");
+            }
+            if (gameObject.CompareTag("East"))
+            {
+                MoveTilesEast();
+                print("working");
+            }
+            if (gameObject.CompareTag("West"))
+            {
+                MoveTilesWest();
+                print("working");
+            }
+            else return;
         }
         else return;
-
     }
 
     public void MoveTilesNorth()

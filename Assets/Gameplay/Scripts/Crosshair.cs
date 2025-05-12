@@ -7,11 +7,6 @@ public class Crosshair : MonoBehaviour
     private Vector3 mousePosition;
     public float moveSpeed = 0.1f;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         mousePosition = Input.mousePosition;

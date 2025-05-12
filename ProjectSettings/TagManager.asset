@@ -55,3 +55,6 @@ TagManager:
   - name: top
     uniqueID: 323805911
     locked: 0
+  - name: Projectile
+    uniqueID: 2177453163
+    locked: 0
