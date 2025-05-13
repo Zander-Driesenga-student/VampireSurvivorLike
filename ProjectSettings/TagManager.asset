@@ -10,11 +10,8 @@ TagManager:
   - South
   - East
   - West
-  - NorthEast
-  - NorthWest
-  - SouthEast
-  - SouthWest
   - Center
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float speed = 10.0f;
-    public float targetTime = 5.0f;
+    public float targetTime = 10.0f;
     void Update()
     {
         transform.position += transform.up * speed * Time.deltaTime;

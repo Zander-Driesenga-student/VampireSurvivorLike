@@ -22,6 +22,7 @@ public class SpriteBoundary : MonoBehaviour
 
     void OnTriggerEnter2D(UnityEngine.Collider2D collision)
     {
+        print("working");
         if (collision.CompareTag("Player"))
         {
             print("working");
