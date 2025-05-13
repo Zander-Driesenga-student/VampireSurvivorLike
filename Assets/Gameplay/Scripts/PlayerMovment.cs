@@ -9,10 +9,12 @@ public class PlayerMovment : MonoBehaviour
     private Vector2 _movment;
 
     private Rigidbody2D _rb;
+    /*public static GameObject player;*/
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        /*player = GetComponent<GameObject>();*/
     }
 
     private void Update()
