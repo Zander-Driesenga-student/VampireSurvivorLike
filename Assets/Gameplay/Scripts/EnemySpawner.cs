@@ -20,9 +20,8 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         curentEnemies = enemiesInRange.Count;
-        print(curentEnemies);
         spawnRate -= Time.deltaTime;
-        if (spawnRate <= 0)
+        if (spawnRate <= 0 && curentEnemies < maxEnemies)
         {
             SpawnEnemy();
             spawnRate = startSpawnRate;
