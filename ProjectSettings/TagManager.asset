@@ -12,6 +12,7 @@ TagManager:
   - West
   - Center
   - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX

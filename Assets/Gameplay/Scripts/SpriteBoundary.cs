@@ -50,6 +50,13 @@ public class SpriteBoundary : MonoBehaviour
         }
         else return;
     }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && gameObject.CompareTag("Center"))
+        {
+            transform.position = other.transform.position;
+        }
+    }
 
     public void MoveTilesNorth()
     {
