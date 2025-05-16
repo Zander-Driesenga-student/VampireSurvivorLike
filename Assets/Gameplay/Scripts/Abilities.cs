@@ -15,4 +15,9 @@ public class Abilities : MonoBehaviour
     {
         
     }
+
+    public void ActivateAbility()
+    {
+        print("jeff");
+    }
 }
