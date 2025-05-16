@@ -22,6 +22,7 @@ public class Projectile : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Health.TryDamage(collision.gameObject, damage);
+            Destroy(gameObject);
         }
     }
 }

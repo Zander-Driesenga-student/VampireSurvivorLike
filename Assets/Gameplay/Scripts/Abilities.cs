@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Abilities : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public UnityEvent ability = new UnityEvent();
+    public int startCooldown = 5;
+    public bool active = true;
     void Start()
     {
         
@@ -18,6 +21,9 @@ public class Abilities : MonoBehaviour
 
     public void ActivateAbility()
     {
-        print("jeff");
+        if (active == true)
+        {
+            ability.Invoke();
+        }
     }
 }
