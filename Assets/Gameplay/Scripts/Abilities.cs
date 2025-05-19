@@ -7,7 +7,7 @@ public class Abilities : MonoBehaviour
 {
     public UnityEvent ability = new UnityEvent();
     public int startCooldown = 5;
-    public bool active = true;
+    public bool active = true; 
     void Start()
     {
         
@@ -23,6 +23,7 @@ public class Abilities : MonoBehaviour
     {
         if (active == true)
         {
+            print("jeff");
             ability.Invoke();
         }
     }

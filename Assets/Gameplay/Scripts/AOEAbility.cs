@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class AOEAbility : MonoBehaviour
 {
-    public int duration = 10;
+    public Crosshair mousePosition;
+    public GameObject AOEAttack;
+    public float duration = 10;
     public int damage = 1;
+
+    private void Awake()
+    {
+
+    }
     void Start()
     {
 
@@ -14,6 +21,8 @@ public class AOEAbility : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        duration -= Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, mousePosition.transform.position, 100f);
+        Debug.Log("there is mousePosition" + transform.position.ToString());
     }
 }

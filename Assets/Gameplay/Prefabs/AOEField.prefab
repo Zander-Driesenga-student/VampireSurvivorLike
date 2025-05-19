@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d421f5fbe65d25840a009aa3f3fdda04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCooldown: 5
-  AOE: {fileID: 0}
-  active: 1
+  mousePosition: {fileID: 0}
+  duration: 10
+  damage: 1
 --- !u!58 &6817598113085330949
 CircleCollider2D:
   m_ObjectHideFlags: 0
