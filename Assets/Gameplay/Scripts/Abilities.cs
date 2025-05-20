@@ -23,7 +23,7 @@ public class Abilities : MonoBehaviour
     {
         if (active == true)
         {
-            print("jeff");
+            
             ability.Invoke();
         }
     }

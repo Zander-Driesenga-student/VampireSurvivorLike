@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Crosshair : MonoBehaviour
 {
-    private Vector3 mousePosition;
+    public static Vector3 mousePosition;
     public float moveSpeed = 0.1f;
 
     private void Awake()

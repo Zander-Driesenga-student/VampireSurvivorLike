@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: AOE
+    uniqueID: 3758082701
+    locked: 0
   - name: top
     uniqueID: 323805911
     locked: 0
