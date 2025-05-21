@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
     private float spawnRate = 5.0f;
     public float startSpawnRate = 5.0f;
     public int maxEnemies = 10;
-    public int enemiesToSpawn = 20;
+    public int enemiesToSpawn = 5;
     public int curentEnemies;
 
     private void Start()

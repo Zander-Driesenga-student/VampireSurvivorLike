@@ -25,5 +25,26 @@ public class Health : MonoBehaviour
             targetHealth.TakeDamage(damageAmount);
         }
     }
+    public static void TryHeal(GameObject target, int HealAmount)
+    {
+        Health targetHealth = target.GetComponent<Health>();
 
+        if (targetHealth)
+        {
+            targetHealth.AddHealth(HealAmount);
+        }
+    }
+    /*public static void TryIncreaseHealth(GameObject target, int HealAmount)
+    {
+        Health targetHealth = target.GetComponent<Health>();
+
+        if (targetHealth)
+        {
+            targetHealth.AddHealth(HealAmount);
+        }
+    }*/
+    public void AddHealth(int health)
+    {
+        currentHealth += health;
+    }
 }

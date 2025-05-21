@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class BeamAbility : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform beamLocation;
+    public GameObject beamReference;
+    public Vector3 beamPosition;
+    public GameObject beam;
+
     void Start()
     {
-        
+        beamReference = GameObject.FindWithTag("Wand");
+
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        beamLocation = beamReference.transform;
+        beamPosition = beamReference.transform.position;
+    }
+    
+    public void SpawnBeam()
+    {
+        if (!beamLocation) return;
+        else
+        {
+            Instantiate(beam, beamPosition, LookAtCrosshair.rotation, beamLocation);
+        }
     }
 }

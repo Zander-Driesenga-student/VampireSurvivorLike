@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 323805911
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2912297781628502651, guid: e95aa77a150de52479e113cd6a60cd6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 5783428854725170428}
   - component: {fileID: 1940750825945993764}
   - component: {fileID: 4352110491074460330}
+  - component: {fileID: 841773942698686030}
   - component: {fileID: 1065569826247312979}
   - component: {fileID: 1352247137961735747}
   m_Layer: 0
@@ -159,12 +160,13 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -100.421974, y: -4.0701003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3931744713436313859}
   - {fileID: 7782600760839073028}
   - {fileID: 5080978818942440338}
   - {fileID: 313085428012725584}
+  - {fileID: 6466560614536814375}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5859684972066563841
@@ -206,7 +208,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 323805911
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4033355307889638888, guid: 1fd2aae6cbec2a045888771c4dbf171e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -260,6 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &4352110491074460330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +277,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
+--- !u!114 &841773942698686030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753103143052827374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4912575cd0f6dbd4085f0d13c0351a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 250
 --- !u!61 &1065569826247312979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -428,7 +445,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 323805911
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 5435608014139152121, guid: 7ae2dd0ae2b67ee40b39f339c4c865d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -514,7 +531,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 323805911
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -539,6 +556,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae47b811c0ba2f4a80511ac030f8aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rot_z: 0
+--- !u!1 &7407783492903672153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6466560614536814375}
+  - component: {fileID: 1218087933528808337}
+  m_Layer: 0
+  m_Name: EnemyTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6466560614536814375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407783492903672153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8525379736402120565}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1218087933528808337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407783492903672153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfe8a9ac9b7b2a40815d8d1990d0275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timer: 0
+  enemy: {fileID: 7803570616541676502, guid: ffd4a5c1d7a1c4342a233da3a84cef26, type: 3}
+  TimeIncrease: 10
+  enemySpawner: {fileID: 0}
 --- !u!1 &8277863400632020916
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,8 +614,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 313085428012725584}
-  - component: {fileID: 5521023153391883814}
   - component: {fileID: 2941812075106270209}
+  - component: {fileID: 7456021467774226124}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -572,25 +638,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8525379736402120565}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5521023153391883814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8277863400632020916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6084b6392bd80140aa573ffa1374d2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemiesInRange: []
-  EnemyPrefab: {fileID: 7803570616541676502, guid: ffd4a5c1d7a1c4342a233da3a84cef26, type: 3}
-  distance: 20
-  startSpawnRate: 2
-  maxEnemies: 10
-  enemiesToSpawn: 20
-  curentEnemies: 0
 --- !u!58 &2941812075106270209
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -627,6 +674,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 40
+--- !u!114 &7456021467774226124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8277863400632020916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6084b6392bd80140aa573ffa1374d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesInRange: []
+  EnemyPrefab: {fileID: 7803570616541676502, guid: ffd4a5c1d7a1c4342a233da3a84cef26, type: 3}
+  distance: 20
+  startSpawnRate: 5
+  maxEnemies: 10
+  enemiesToSpawn: 5
+  curentEnemies: 0
 --- !u!1 &8416407286039039268
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +705,7 @@ GameObject:
   - component: {fileID: 7369067630893198070}
   m_Layer: 0
   m_Name: CenterAttack
-  m_TagString: Untagged
+  m_TagString: Wand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,7 +719,7 @@ Transform:
   m_GameObject: {fileID: 8416407286039039268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.062, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05518, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

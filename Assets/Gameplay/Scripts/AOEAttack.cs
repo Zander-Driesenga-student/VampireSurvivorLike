@@ -17,11 +17,7 @@ public class AOEAttack : MonoBehaviour
     void Update()
     {
         duration -= Time.deltaTime;
-        damageTimer -= Time.deltaTime;
-        if (damageTimer <= 0)
-        {
-            damageTimer = startDamageTimer;
-        }
+        
         if (duration <= 0)
         {
             Destroy(gameObject);
@@ -30,11 +26,12 @@ public class AOEAttack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        print("jeff");
-        if (other.gameObject.CompareTag("Enemy") && damageTimer > 0f)
+        damageTimer -= Time.deltaTime;
+        if (other.gameObject.CompareTag("Enemy") && damageTimer <= 0f)
         {
-            print("jeff2");
+            
             Health.TryDamage(other.gameObject, damage);
+            damageTimer = startDamageTimer;
         }
     }
 }

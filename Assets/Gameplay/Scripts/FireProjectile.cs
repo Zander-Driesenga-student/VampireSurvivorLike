@@ -11,7 +11,7 @@ public class FireProjectile : MonoBehaviour
 
     void Update()
     {
-        if (automatic)
+        if (automatic == true)
         {
             if (Input.GetMouseButton(0))
             {
