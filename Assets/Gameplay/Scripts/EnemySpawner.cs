@@ -5,13 +5,21 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public List<GameObject> enemiesInRange = new List<GameObject>();
-    public GameObject EnemyPrefab;
+    public GameObject enemyPrefab;
+    public EXPSystem expSystem;
+    public Enemy enemy;
     public float distance = 20.0f;
     private float spawnRate = 5.0f;
     public float startSpawnRate = 5.0f;
     public int maxEnemies = 10;
     public int enemiesToSpawn = 5;
     public int curentEnemies;
+
+    private void Awake()
+    {
+        Health.TryStartHealth(enemyPrefab, Enemy.startHealth1);
+        expSystem = GetComponentInParent<EXPSystem>();
+    }
 
     private void Start()
     {
@@ -39,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
         float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
         Vector2 delta = new Vector2(Mathf.Cos(angle) * distance, Mathf.Sin(angle) * distance);
         Vector2 enemySpawn = spawnPos + delta;
-        Instantiate(EnemyPrefab, enemySpawn, Quaternion.identity);
+        Instantiate(enemyPrefab, enemySpawn, Quaternion.identity);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -54,6 +62,7 @@ public class EnemySpawner : MonoBehaviour
         {
             enemiesInRange.Remove(other.gameObject);
             Destroy(other.gameObject);
+            /*expSystem.exp -= Enemy.currentHealth1;*/
         }
     }
 }

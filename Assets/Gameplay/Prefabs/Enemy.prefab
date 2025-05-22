@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   startDamageTimer: 1
+  startHealth: 10
 --- !u!50 &6076791591196805477
 Rigidbody2D:
   serializedVersion: 4
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4912575cd0f6dbd4085f0d13c0351a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 50
+  currentHealth: 10
 --- !u!60 &-3740211962137683422
 PolygonCollider2D:
   m_ObjectHideFlags: 0
