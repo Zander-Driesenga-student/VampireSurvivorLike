@@ -13,6 +13,9 @@ public class EXPSystem : MonoBehaviour
     
     void Update()
     {
-        
+        /*if (exp >= 2100)
+        {
+            Health.TryHeal(gameObject, Enemy.currentHealth1 / 5);
+        }*/
     }
 }

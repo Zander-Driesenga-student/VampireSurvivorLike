@@ -19,15 +19,15 @@ public class AbilityActivator : MonoBehaviour
         {
             abilities[0].ActivateAbility();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && abilities[1])
+        if (Input.GetKeyDown(KeyCode.Alpha2) && abilities[1] && exp.exp >= 800)
         {
             abilities[1].ActivateAbility();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && abilities[2])
+        if (Input.GetKeyDown(KeyCode.Alpha3) && abilities[2] && exp.exp >= 1500)
         {
             abilities[2].ActivateAbility();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && abilities[3])
+        if (Input.GetKeyDown(KeyCode.Alpha4) && abilities[3] && exp.exp >= 2100)
         {
             abilities[3].ActivateAbility();
         }

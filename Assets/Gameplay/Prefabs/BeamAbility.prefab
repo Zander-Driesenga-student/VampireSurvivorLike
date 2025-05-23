@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 323805911
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -6590564839193625277, guid: b8fa3882fa0e249449026cd32f1e68a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   startCooldown: 5
+  cooldown: 5
   active: 1
 --- !u!114 &6668088457349030474
 MonoBehaviour:
@@ -116,4 +117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beamLocation: {fileID: 0}
+  beamReference: {fileID: 0}
+  beamPosition: {x: 0, y: 0, z: 0}
   beam: {fileID: 2278048132712216373, guid: 92cc8c423c9112342ae9514cdce7f07d, type: 3}

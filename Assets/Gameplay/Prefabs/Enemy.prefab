@@ -103,6 +103,11 @@ MonoBehaviour:
   damage: 1
   startDamageTimer: 1
   startHealth: 10
+  health: {fileID: 0}
+  currentHealth: 0
+  currentHealth2: 0
+  expSystem: {fileID: 0}
+  killed: 0
 --- !u!50 &6076791591196805477
 Rigidbody2D:
   serializedVersion: 4
@@ -143,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 10
+  healthBar: {fileID: 0}
 --- !u!60 &-3740211962137683422
 PolygonCollider2D:
   m_ObjectHideFlags: 0

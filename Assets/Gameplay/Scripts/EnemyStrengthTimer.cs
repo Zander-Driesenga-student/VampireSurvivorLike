@@ -9,6 +9,8 @@ public class EnemyStrengthTimer : MonoBehaviour
     public float timeIncrease;
     private float nextBoost;
     public EnemySpawner enemySpawner;
+    public int damageBoost = 0;
+    public int boostsToDamageBoost = 3;
     void Start()
     {
         enemySpawner = FindAnyObjectByType<EnemySpawner>();
@@ -23,6 +25,11 @@ public class EnemyStrengthTimer : MonoBehaviour
             enemySpawner.maxEnemies += 10;
             enemySpawner.enemiesToSpawn += 5;
             Health.TryHeal(enemy, 10);
+            if (damageBoost == boostsToDamageBoost)
+            {
+                Enemy.damage2 += 1;
+                damageBoost = 0;
+            }
             nextBoost += timeIncrease;
         }
     }

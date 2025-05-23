@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 841773942698686030}
   - component: {fileID: 1065569826247312979}
   - component: {fileID: 1352247137961735747}
+  - component: {fileID: 1615354966247114015}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -267,6 +268,7 @@ MonoBehaviour:
   - {fileID: 3096037073013410196}
   - {fileID: 398436290036486214}
   - {fileID: 8606070391361705345}
+  exp: {fileID: 0}
 --- !u!114 &4352110491074460330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 250
+  healthBar: {fileID: 0}
 --- !u!61 &1065569826247312979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -376,6 +379,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.47, y: 1}
   m_Direction: 0
+--- !u!114 &1615354966247114015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753103143052827374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6ff7d6e173544478053f18ad638d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exp: 0
 --- !u!1 &4545614894020111444
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +707,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesInRange: []
   enemyPrefab: {fileID: 7803570616541676502, guid: ffd4a5c1d7a1c4342a233da3a84cef26, type: 3}
+  expSystem: {fileID: 0}
+  enemy: {fileID: 0}
   distance: 20
   startSpawnRate: 5
   maxEnemies: 10
@@ -849,11 +867,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3372210089446797164, guid: f99075c39f211824cb58f185dbfccdaf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.89
+      value: 0.196
       objectReference: {fileID: 0}
     - target: {fileID: 3372210089446797164, guid: f99075c39f211824cb58f185dbfccdaf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.97
+      value: -3.184
       objectReference: {fileID: 0}
     - target: {fileID: 3372210089446797164, guid: f99075c39f211824cb58f185dbfccdaf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -965,11 +983,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4869660775132224812, guid: 828c882dcc53d2d4586cfeec5e8d7b2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.64
+      value: -2.423
       objectReference: {fileID: 0}
     - target: {fileID: 4869660775132224812, guid: 828c882dcc53d2d4586cfeec5e8d7b2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.79
+      value: -3.137
       objectReference: {fileID: 0}
     - target: {fileID: 4869660775132224812, guid: 828c882dcc53d2d4586cfeec5e8d7b2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1046,11 +1064,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5155300383007783988, guid: 01567fc138720484b80011ec747ca59b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.97
+      value: -1.136
       objectReference: {fileID: 0}
     - target: {fileID: 5155300383007783988, guid: 01567fc138720484b80011ec747ca59b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.87
+      value: -3.124
       objectReference: {fileID: 0}
     - target: {fileID: 5155300383007783988, guid: 01567fc138720484b80011ec747ca59b, type: 3}
       propertyPath: m_LocalPosition.z

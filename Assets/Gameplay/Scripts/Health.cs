@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int currentHealth = 10;
-    public EXPSystem exp;
+    public int currentHealth;
+    
+    public HealthBar healthBar;
+
+    public void Start()
+    {
+        healthBar = FindAnyObjectByType<HealthBar>();
+        if (gameObject.CompareTag("Player"))
+        {
+            healthBar.SetMaxHealth(currentHealth);
+        }
+
+    }
 
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-        /*UIValues.OnValueChange.Invoke(gameObject.name + "Health", currentHealth);*/
-        /*if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
+        if (gameObject.CompareTag("Player"))
         {
-            
-            Destroy(gameObject);
-        }*/
+            healthBar.SetHealth(currentHealth);
+        }
     }
     public static void TryDamage(GameObject target, int damageAmount)
     {
