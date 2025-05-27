@@ -11,16 +11,15 @@ public class Kills : MonoBehaviour
     private void Awake()
     {
         displayKills = GetComponent<Text>();
-
     }
     private void Update()
     {
         displayKills.text = kills.ToString();
     }
-    public static void TryGetKill()
+    /*public static void TryGetKill()
     {
         
-    }
+    }*/
     public void AddKill()
     {
         kills++;

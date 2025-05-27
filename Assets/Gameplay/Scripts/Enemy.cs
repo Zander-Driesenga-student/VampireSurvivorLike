@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public static int currentHealth1;
     public EXPSystem expSystem;
     public bool killed = false;
+    public Kills kills;
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class Enemy : MonoBehaviour
         currentHealth2 = health.currentHealth;
         expSystem = FindAnyObjectByType<EXPSystem>();
         damage1 = damage;
+        kills = FindAnyObjectByType<Kills>();
     }
 
     void Start()
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour
         {
             killed = true;
             Destroy(gameObject);
+            kills.AddKill();
         }
     }
     private void OnTriggerStay2D(Collider2D other)
@@ -59,11 +62,12 @@ public class Enemy : MonoBehaviour
         if (killed == true)
         {
             expSystem.exp += currentHealth2;
-            Kills.TryGetKill();
+            print("jeff");
         }
-        if (expSystem.exp >= 2100)
+        if (expSystem.exp >= 2100 && killed == true)
         {
             Health.TryHeal(player.gameObject, currentHealth2);
+            print("jeff2");
         }
         else
         {

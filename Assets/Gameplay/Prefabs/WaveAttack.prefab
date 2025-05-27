@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6283484691592943415}
   - component: {fileID: 333648232830825170}
   - component: {fileID: 94043725567724148}
+  - component: {fileID: 7511929481854071004}
   m_Layer: 0
   m_Name: WaveAttack
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2117514133
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3725090246984383846, guid: 41f6929d5d370974d80c30659ec5d962, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -156,3 +157,19 @@ PolygonCollider2D:
       - {x: 0.31904945, y: -0.067575686}
       - {x: 0.4025124, y: -0.090449795}
   m_UseDelaunayMesh: 0
+--- !u!114 &7511929481854071004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311717091008663562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f1078b9e6043e40be42a1f60899966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  targetTime: 10
+  damage: 10
+  isPiercing: 1

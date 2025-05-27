@@ -8,6 +8,7 @@ public class AbilityEXP : MonoBehaviour
     public EXPSystem playerEXP;
     public int neededXP;
     public Image abilityIcon;
+    public bool hasRequiredEXP = false;
     void Start()
     {
         playerEXP = FindAnyObjectByType<EXPSystem>();
@@ -17,11 +18,13 @@ public class AbilityEXP : MonoBehaviour
     
     void Update()
     {
-        if (playerEXP.exp >= neededXP)
+        if (playerEXP.exp >= neededXP && hasRequiredEXP == false)
         {
             Color currentColor = abilityIcon.color;
             abilityIcon.color = new Color(currentColor.r, currentColor.g, currentColor.b, 255);
-/*0.3137/80 is the dull form*/
+            /*0.3137/80 is the dull form*/
+            hasRequiredEXP = true;
         }
     }
+
 }

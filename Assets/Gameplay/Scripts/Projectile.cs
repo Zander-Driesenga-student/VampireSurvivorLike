@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     public float speed = 10.0f;
     public float targetTime = 10.0f;
     public int damage = 1;
+    public bool isPiercing = false;
     void Update()
     {
         transform.position += transform.up * speed * Time.deltaTime;
@@ -22,7 +23,11 @@ public class Projectile : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Health.TryDamage(collision.gameObject, damage);
-            Destroy(gameObject);
+            if (isPiercing == false)
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
 }

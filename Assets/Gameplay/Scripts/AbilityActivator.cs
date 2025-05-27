@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(EXPSystem))]
 public class AbilityActivator : MonoBehaviour
 {
     public List<Abilities> abilities = new List<Abilities>();
+    /*public List<Image> images = new List<Image>();*/
     public EXPSystem exp;
     void Start()
     {
