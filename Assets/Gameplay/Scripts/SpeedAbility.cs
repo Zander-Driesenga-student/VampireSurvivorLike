@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpeedAbility : MonoBehaviour
 {
     public PlayerMovment player;
-    public float duration = 5f;
+    public float duration;
+    public float startDuration;
     public bool ready = true;
     public float playerSpeed;
     void Start()
@@ -26,7 +27,7 @@ public class SpeedAbility : MonoBehaviour
             if (duration <= 0)
             {
                 player._moveSpeed = playerSpeed;
-                duration = 5f;
+                duration = startDuration;
                 ready = true;
             }
         }

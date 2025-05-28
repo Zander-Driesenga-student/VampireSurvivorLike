@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     public int currentHealth;
-    
+    public bool canDie = true;
     public HealthBar healthBar;
+    public UnityEvent onZeroHealth = new UnityEvent();
 
     public void Start()
     {
@@ -24,6 +26,10 @@ public class Health : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             healthBar.SetHealth(currentHealth);
+        }
+        if (currentHealth <= 0 && canDie == true && gameObject.CompareTag("Player"))
+        {
+            OnZeroHealth();
         }
     }
     public static void TryDamage(GameObject target, int damageAmount)
@@ -70,4 +76,9 @@ public class Health : MonoBehaviour
     {
         currentHealth = health;
     }
+    public void OnZeroHealth()
+    {
+        onZeroHealth.Invoke();
+    }
+
 }

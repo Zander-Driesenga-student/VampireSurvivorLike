@@ -62,7 +62,6 @@ public class EnemySpawner : MonoBehaviour
         {
             enemiesInRange.Remove(other.gameObject);
             Destroy(other.gameObject);
-            /*expSystem.exp -= Enemy.currentHealth1;*/
         }
     }
 }

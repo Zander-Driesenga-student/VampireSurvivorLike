@@ -126,6 +126,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startCooldown: 5
-  cooldown: 5
+  abilityIcon: {fileID: 0}
+  dullImage: {fileID: 0}
+  startCooldown: 15
+  cooldown: 15
+  charges: 0
+  startCharges: 3
   active: 1

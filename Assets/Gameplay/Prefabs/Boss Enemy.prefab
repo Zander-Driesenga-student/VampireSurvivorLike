@@ -100,10 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9b2bb0110789e4596bcd5f9ca41980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalSpeed: 0
+  speed: 1
+  isFrozen: 0
   damage: 1
   damage1: 1
   startDamageTimer: 1
-  startHealth: 10
+  startHealth: 10000
   health: {fileID: 0}
   currentHealth: 0
   currentHealth2: 0
@@ -149,8 +152,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4912575cd0f6dbd4085f0d13c0351a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 10000
+  canDie: 1
   healthBar: {fileID: 0}
+  onZeroHealth:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!60 &-3740211962137683422
 PolygonCollider2D:
   m_ObjectHideFlags: 0

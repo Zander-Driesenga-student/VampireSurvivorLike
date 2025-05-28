@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private PlayerMovment player;
+    public float originalSpeed;
+    public float speed = 1.0f;
+    public bool isFrozen = false;
     public int damage = 1;
     public int damage1 = 1;
     public static int damage2 = 1;
@@ -28,6 +31,7 @@ public class Enemy : MonoBehaviour
         expSystem = FindAnyObjectByType<EXPSystem>();
         damage1 = damage;
         kills = FindAnyObjectByType<Kills>();
+        originalSpeed = speed;
     }
 
     void Start()
@@ -37,7 +41,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.gameObject.transform.position, 1f * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.gameObject.transform.position, speed * Time.deltaTime);
         currentHealth = health.currentHealth;
         currentHealth1 = currentHealth;
         damage1 = damage2;
@@ -74,5 +78,19 @@ public class Enemy : MonoBehaviour
             return;
 
         }
+    }
+    public void StopMovment()
+    {
+        if (isFrozen == true)
+        {
+            speed = originalSpeed;
+            isFrozen = false;
+        }
+        else
+        {
+            speed = 0f;
+            isFrozen = true;
+        }
+        
     }
 }

@@ -18,4 +18,17 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
     }
+    public static void LoadScene(string newSceneName)
+    {
+        SceneManager.LoadScene(newSceneName);
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public static void Lose()
+    {
+        SceneManager.LoadScene("DeathScene");
+    }
 }
