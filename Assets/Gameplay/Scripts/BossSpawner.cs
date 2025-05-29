@@ -33,6 +33,7 @@ public class BossSpawner : MonoBehaviour
         float angle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
         Vector2 delta = new Vector2(Mathf.Cos(angle) * distance, Mathf.Sin(angle) * distance);
         Vector2 enemySpawn = spawnPos + delta;
-        Instantiate(bossPrefab, enemySpawn, Quaternion.identity);
+        bossPrefab.SetActive(true);
+        bossPrefab.transform.position = enemySpawn;
     }
 }

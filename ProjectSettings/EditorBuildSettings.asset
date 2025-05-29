@@ -6,16 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 40e304dfbb2084042ba81b693919475d
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: df8d1b04de57f95428049442fb3a8d4c
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 40e304dfbb2084042ba81b693919475d
-  - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: 144f194b2441d414182b4062cb6073e5
+  - enabled: 1
+    path: Assets/Scenes/NightmareMode.unity
+    guid: caf8385217d602046b07829074fb43e3
+  - enabled: 1
+    path: Assets/Scenes/NightmareWin.unity
+    guid: 9d40bf2fe8ef6624a8cb874124de944f
+  - enabled: 1
+    path: Assets/Scenes/NormalWin.unity
+    guid: 159f027fd10eeaa48a71f8f0c70132c3
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

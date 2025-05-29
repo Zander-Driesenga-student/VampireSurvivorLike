@@ -9,6 +9,7 @@ public class SpeedAbility : MonoBehaviour
     public float startDuration;
     public bool ready = true;
     public float playerSpeed;
+    public float speedMulti;
     void Start()
     {
         player = FindAnyObjectByType<PlayerMovment>();
@@ -34,7 +35,7 @@ public class SpeedAbility : MonoBehaviour
     }
     public void MakePlayerFast()
     {
-        player._moveSpeed *= 2f;
+        player._moveSpeed *= speedMulti;
         ready = false;
     }
 

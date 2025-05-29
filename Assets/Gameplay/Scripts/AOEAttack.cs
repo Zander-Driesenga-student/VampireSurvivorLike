@@ -27,7 +27,7 @@ public class AOEAttack : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         damageTimer -= Time.deltaTime;
-        if (other.gameObject.CompareTag("Enemy") && damageTimer <= 0f)
+        if (other.gameObject.CompareTag("Enemy") || other.CompareTag("Boss") && damageTimer <= 0f)
         {
             
             Health.TryDamage(other.gameObject, damage);

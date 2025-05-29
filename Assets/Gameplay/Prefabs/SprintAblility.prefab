@@ -115,8 +115,10 @@ MonoBehaviour:
         m_CallState: 2
   abilityIcon: {fileID: 0}
   dullImage: {fileID: 0}
-  startCooldown: 5
-  cooldown: 5
+  startCooldown: 7
+  cooldown: 7
+  charges: 0
+  startCharges: 0
   active: 1
 --- !u!114 &6020758312628594224
 MonoBehaviour:
@@ -131,6 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  duration: 20
+  duration: 25
+  startDuration: 0
   ready: 1
   playerSpeed: 0
+  speedMulti: 3

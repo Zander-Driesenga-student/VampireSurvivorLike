@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
         {
             healthBar.SetHealth(currentHealth);
         }
-        if (currentHealth <= 0 && canDie == true && gameObject.CompareTag("Player"))
+        if (currentHealth <= 0 && canDie == true)
         {
             OnZeroHealth();
         }

@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float timer;
-    [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private int minutes;
-    [SerializeField] private int seconds;
+    public float timer;
+    public Text timerText;
+    public int minutes;
+    public int seconds;
     
-    void Update()
+    public void Update()
     {
         timer += Time.deltaTime;
         minutes = Mathf.FloorToInt(timer / 60f);

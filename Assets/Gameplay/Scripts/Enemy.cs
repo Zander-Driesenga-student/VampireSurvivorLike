@@ -66,12 +66,12 @@ public class Enemy : MonoBehaviour
         if (killed == true)
         {
             expSystem.exp += currentHealth2;
-            print("jeff");
+            
         }
         if (expSystem.exp >= 2100 && killed == true)
         {
             Health.TryHeal(player.gameObject, currentHealth2);
-            print("jeff2");
+            
         }
         else
         {
