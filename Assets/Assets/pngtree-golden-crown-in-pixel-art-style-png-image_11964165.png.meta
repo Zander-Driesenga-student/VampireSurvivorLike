@@ -164,7 +164,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pngtree-golden-crown-in-pixel-art-style-png-image_11964165_0: -8349386348244238699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
