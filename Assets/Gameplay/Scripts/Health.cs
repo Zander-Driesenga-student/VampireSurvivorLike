@@ -45,7 +45,11 @@ public class Health : MonoBehaviour
     {
         Health targetHealth = target.GetComponent<Health>();
 
-        if (targetHealth)
+        if (targetHealth && target.CompareTag("Enemy"))
+        {
+            targetHealth.AddHealth(HealAmount);
+        }
+        else if (targetHealth && target.CompareTag("Player"))
         {
             targetHealth.AddHealth(HealAmount);
         }
@@ -62,6 +66,11 @@ public class Health : MonoBehaviour
     public void AddHealth(int health)
     {
         currentHealth += health;
+    }
+    public void AddPlayerHealth(int health)
+    {
+        currentHealth += health;
+        healthBar.SetHealth(currentHealth);
     }
     public static void TryStartHealth(GameObject target, int HealAmount)
     {
